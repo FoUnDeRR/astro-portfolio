@@ -1,5 +1,5 @@
 ---
-
+const pageTitle = "Projects"
 ---
 
 <html lang="en">
@@ -10,7 +10,7 @@
 		<meta name="generator" content={Astro.generator} />
 
 		<script src="https://kit.fontawesome.com/d927e9314c.js" crossorigin="anonymous"></script>
-		<title>FoUnDeR</title>
+		<title>{pageTitle}</title>
 	</head>
 
 	<body>
@@ -20,14 +20,14 @@
 			<a href="/contact">Contacts</a>
 
         	<h1>
-            	Projects
+            	{pageTitle}
         	</h1>
         	<p>
             	<table border="0" class="projects">
                 	<tr><th>Name</th><th>Description</th><th>Period</th></tr>
-                	<tr><td>Wollis Discord Bot</td><td>A multi-purpose discord application</td><td>Nov 21, 2023 - Present</td></tr>
-                	<tr><td>Portfolio Website</td><td>A simple website I made about me, with selected number of programming languages.</td><td>May 17, 2025 - Present</td></tr>
-                	<tr><td>The Discord Library</td><td>A discord community which provides tools and resources to make anyone's discord experience less tiring.</td><td>May 17, 2025 - Present</td></tr>                  
+                	<tr><td><a href="/projects/wollis-discord-bot">About Wollis the Discord bot</a></td><td>A multi-purpose discord application</td><td>Nov 21, 2023 - Present</td></tr>
+                	<tr><td><a href="/projects/portfolio">How I made this portfolio</a></td><td>A simple website I made about me, with selected number of programming languages.</td><td>May 17, 2025 - Present</td></tr>
+                	<tr><td><a href="/projects/tdl">The Discord Library</a></td><td>A discord community which provides tools and resources to make anyone's discord experience less tiring.</td><td>May 17, 2025 - Present</td></tr>                  
             	</table>
         	</p>
     	</div>

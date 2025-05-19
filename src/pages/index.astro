@@ -1,5 +1,10 @@
 ---
+const pageTitle = "Home"
 
+const myInfo = {
+	nick: "FoUnDeR",
+	otherNicks: ["Grzzly/", "JustMightyYeti"],
+};
 ---
 
 <html lang="en">
@@ -10,7 +15,7 @@
 		<meta name="generator" content={Astro.generator} />
 
 		<script src="https://kit.fontawesome.com/d927e9314c.js" crossorigin="anonymous"></script>
-		<title>FoUnDeR</title>
+		<title>{pageTitle}</title>
 	</head>
 
 	<body>
@@ -18,15 +23,15 @@
 			<a href="/">Home</a>
 			<a href="/projects/">Projects</a>
 			<a href="/contact">Contacts</a>
-						
+
         	<h1>
-            	Hello, I am FoUnDeR <i class="fa-classic fa-solid fa-heart" color="red"></i>
+            	Hello, I am {myInfo.nick} <i class="fa-classic fa-solid fa-heart" color="red"></i>
         	</h1>
         	<h4>
-            	<em>Other nicknames: Grzzly/Just Mighty Yeti</em>
+            	<em>Also known as {myInfo.otherNicks.map((nicks) => <b>{nicks}</b>)}</em>
         	</h4>
         	<p>
-            	I am a 16-year-old self-taught developer, programmer, designer, and community moderator from Sri Lanka. I love music, rabbits, games, and spending quality time with my family.
+				I am a 16-year-old self-taught developer, programmer, designer, and community moderator from Sri Lanka. I love music, rabbits, games, and spending quality time with my family.
         	</p>
     	</div>
 	</body>
