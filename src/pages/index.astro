@@ -12,6 +12,8 @@ const myContacts = {
 	discord: "ukkei",
 	github: "FoUnDeRR",
 };
+
+const occupations = ["Developer", "Programmer", "Designer", "Moderator"]
 ---
 
 <html lang="en">
@@ -32,13 +34,14 @@ const myContacts = {
 				<a href="/projects/">Projects</a>			
 			</div>
 
-			<img src="/public/logo.png" alt="My Favorite Avatar" class="logo" />
+			<img src="/logo.png" alt="My Favorite Avatar" class="logo" draggable="false" />
 
         	<h1>Hola, I am {myInfo.nick} <i class="fa-classic fa-solid fa-heart" color="red"></i></h1>
         	<h4><em>Also known as {myInfo.otherNicks.map((nicks) => <b class="nicks">{nicks}</b>)}</em></h4>
         	<p>I'm a 16-year-old self-taught developer, programming and building variety of applications makes me happy, I don't know why. Other than that, I happen to be a Graphic Designer and Moderator. Favorite animal? bunnies and golden retrievers.</p>
 
 			<p>And of course, how can I forget, I love watching anime, Haikyuu!! and One Piece stands on top as my favorites, you can find more details on <a href="https://anilist.co/user/FoUnDeR/">https://anilist.co/user/FoUnDeR/</a></p>
+			<p class="occupations">{occupations.map((jobs) =>  <em class="occupations">{jobs}</em>)}</p>
     	</div>
 
 		<div>
