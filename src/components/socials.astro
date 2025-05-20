@@ -1,0 +1,11 @@
+---
+const githubName = "github";
+const githubUsername = "FoUnDeRR";
+
+const userRoute = "users";
+const discordID = "965629616012267570";
+
+const { platform, username } = Astro.props;
+---
+
+<p><i class="fa-classic fa-brands fa-discord" color="white"></i> <a href={`https://discord.com/${userRoute}/${discordID}`} class="discordSocial">Discord</a> <i class="fa-classic fa-brands fa-github" color="white"></i> <a href={`https://${githubName}.com/${githubUsername}`} class="githubSocial">Github</a></p>

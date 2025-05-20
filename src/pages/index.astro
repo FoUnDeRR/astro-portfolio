@@ -1,5 +1,9 @@
 ---
 import '../styles/global.css';
+import Navigation from '../components/navigation.astro';
+import Footer from '../components/footer.astro';
+import Socials from '../components/socials.astro';
+
 
 const pageTitle = "Home"
 
@@ -29,13 +33,11 @@ const occupations = ["Developer", "Programmer", "Designer", "Moderator"]
 
 	<body>
 		<div>
-			<div class="nav">
-				<a href="/">Home</a>
-				<a href="/projects/">Projects</a>			
-			</div>
+			<Navigation />
 
 			<img src="/logo.png" alt="My Favorite Avatar" class="logo" draggable="false" />
-
+			
+			
         	<h1>Hola, I am {myInfo.nick} <i class="fa-classic fa-solid fa-heart" color="red"></i></h1>
         	<h4><em>Also known as {myInfo.otherNicks.map((nicks) => <b class="nicks">{nicks}</b>)}</em></h4>
         	<p>I'm a 16-year-old self-taught developer, programming and building variety of applications makes me happy, I don't know why. Other than that, I happen to be a Graphic Designer and Moderator. Favorite animal? bunnies and golden retrievers.</p>
@@ -45,9 +47,8 @@ const occupations = ["Developer", "Programmer", "Designer", "Moderator"]
     	</div>
 
 		<div>
-			<h2>How you can contact me</h2>
-			<p><i class="fa-classic fa-brands fa-discord" color="white"></i> Discord: <a href="https://discord.com/users/965629616012267570">{myContacts.discord}</a></p>
-			<p><i class="fa-classic fa-brands fa-github" color="white"></i> Github: <a href="https://github.com/FoUnDeRR">{myContacts.github}</a></p>
+			<Socials />
 		</div>
+		<Footer />
 	</body>
 </html>
