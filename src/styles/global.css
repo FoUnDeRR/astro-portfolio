@@ -1,0 +1,35 @@
+html {
+  background-color: #1d1d1d;
+  font-family: sans-serif;
+  color: white;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 80ch;
+  padding: 1rem;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 1rem 0;
+  font-size: 2.5rem;
+}
+
+.nicks {
+    color: gray;
+}
+
+a {
+    color: white;
+    margin-right: 25px;
+}
+
+.logo {
+    padding-top: 50px;
+}

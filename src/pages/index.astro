@@ -1,9 +1,16 @@
 ---
+import '../styles/global.css';
+
 const pageTitle = "Home"
 
 const myInfo = {
 	nick: "FoUnDeR",
 	otherNicks: ["Grzzly/", "JustMightyYeti"],
+};
+
+const myContacts = {
+	discord: "ukkei",
+	github: "FoUnDeRR",
 };
 ---
 
@@ -20,19 +27,24 @@ const myInfo = {
 
 	<body>
 		<div>
-			<a href="/">Home</a>
-			<a href="/projects/">Projects</a>
-			<a href="/contact">Contacts</a>
+			<div class="nav">
+				<a href="/">Home</a>
+				<a href="/projects/">Projects</a>			
+			</div>
 
-        	<h1>
-            	Hello, I am {myInfo.nick} <i class="fa-classic fa-solid fa-heart" color="red"></i>
-        	</h1>
-        	<h4>
-            	<em>Also known as {myInfo.otherNicks.map((nicks) => <b>{nicks}</b>)}</em>
-        	</h4>
-        	<p>
-				I am a 16-year-old self-taught developer, programmer, designer, and community moderator from Sri Lanka. I love music, rabbits, games, and spending quality time with my family.
-        	</p>
+			<img src="/public/logo.png" alt="My Favorite Avatar" class="logo" />
+
+        	<h1>Hola, I am {myInfo.nick} <i class="fa-classic fa-solid fa-heart" color="red"></i></h1>
+        	<h4><em>Also known as {myInfo.otherNicks.map((nicks) => <b class="nicks">{nicks}</b>)}</em></h4>
+        	<p>I'm a 16-year-old self-taught developer, programming and building variety of applications makes me happy, I don't know why. Other than that, I happen to be a Graphic Designer and Moderator. Favorite animal? bunnies and golden retrievers.</p>
+
+			<p>And of course, how can I forget, I love watching anime, Haikyuu!! and One Piece stands on top as my favorites, you can find more details on <a href="https://anilist.co/user/FoUnDeR/">https://anilist.co/user/FoUnDeR/</a></p>
     	</div>
+
+		<div>
+			<h2>How you can contact me</h2>
+			<p><i class="fa-classic fa-brands fa-discord" color="white"></i> Discord: <a href="https://discord.com/users/965629616012267570">{myContacts.discord}</a></p>
+			<p><i class="fa-classic fa-brands fa-github" color="white"></i> Github: <a href="https://github.com/FoUnDeRR">{myContacts.github}</a></p>
+		</div>
 	</body>
 </html>
