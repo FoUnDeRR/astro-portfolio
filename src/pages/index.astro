@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import Navigation from '../components/navigation.astro';
+import Header from '../components/header.astro';
 import Footer from '../components/footer.astro';
 import Socials from '../components/socials.astro';
 
@@ -33,7 +33,7 @@ const occupations = ["Developer", "Programmer", "Designer", "Moderator"]
 
 	<body>
 		<div>
-			<Navigation />
+			<Header />
 
 			<img src="/logo.png" alt="My Favorite Avatar" class="logo" draggable="false" />
 			
@@ -50,5 +50,8 @@ const occupations = ["Developer", "Programmer", "Designer", "Moderator"]
 			<Socials />
 		</div>
 		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
 	</body>
 </html>
