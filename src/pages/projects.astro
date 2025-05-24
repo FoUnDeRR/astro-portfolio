@@ -1,8 +1,15 @@
 ---
 import ProjectsLayout from '../layouts/projectslayout.astro';
+import ProjectPosts from '../components/projectposts.astro';
+
+const allProjects = Object.values(import.meta.glob('./projects/*.md', { eager: true }));
 const pageTitle = "Projects";
+
 ---
 
 <ProjectsLayout pageTitle={pageTitle}>
 	<p>More to be added.</p>
+	<ul>
+		{allProjects.map((post: any) => <ProjectPosts url={post.url} title={post.frontmatter.title} />)}
+	</ul>
 </ProjectsLayout>

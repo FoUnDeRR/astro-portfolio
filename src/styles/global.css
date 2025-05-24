@@ -22,11 +22,13 @@ h1 {
 }
 
 .nicks {
-    color: #808080;
+    color: white;
     background-color: #2b2d31;
     text-decoration: none;
     border-radius: 4px;
+    border-style: groove;
     margin-right: 10px;
+    border-width: 1px;
 }
 
 a {
