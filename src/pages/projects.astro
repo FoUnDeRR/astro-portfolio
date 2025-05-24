@@ -1,41 +1,8 @@
 ---
-import Header from '../components/header.astro';
-import Footer from '../components/footer.astro';
-
-const pageTitle = "Projects"
-import '../styles/global.css';
+import ProjectsLayout from '../layouts/projectslayout.astro';
+const pageTitle = "Projects";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-
-		<script src="https://kit.fontawesome.com/d927e9314c.js" crossorigin="anonymous"></script>
-		<title>{pageTitle}</title>
-	</head>
-
-	<body>
-    	<div>
-			<Header />
-
-        	<h1>
-            	{pageTitle}
-        	</h1>
-        	<p>
-            	<table border="0" class="projects">
-                	<tr><th>Name</th><th>Description</th><th>Period</th></tr>
-                	<tr><td><a href="/projects/wollis-discord-bot">About Wollis the Discord bot</a></td><td>A multi-purpose discord application</td><td>Nov 21, 2023 - Present</td></tr>
-                	<tr><td><a href="/projects/portfolio">How I made this portfolio</a></td><td>A simple website I made about me, with selected number of programming languages.</td><td>May 17, 2025 - Present</td></tr>
-                	<tr><td><a href="/projects/tdl">The Discord Library</a></td><td>A discord community which provides tools and resources to make anyone's discord experience less tiring.</td><td>May 17, 2025 - Present</td></tr>                  
-            	</table>
-        	</p>
-    	</div>
-		<Footer />
-		<script>
-			import "../scripts/menu.js";
-		</script>
-	</body>
-</html>
+<ProjectsLayout pageTitle={pageTitle}>
+	<p>More to be added.</p>
+</ProjectsLayout>

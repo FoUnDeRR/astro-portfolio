@@ -1,0 +1,51 @@
+---
+import '../styles/global.css';
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import Socials from '../components/socials.astro';
+
+const { pageTitle } = Astro.props;
+
+const myInfo = {
+	nick: "FoUnDeR",
+	otherNicks: ["Grzzly/", "JustMightyYeti"],
+};
+const occupations = ["Developer", "Programmer", "Designer", "Moderator"]
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+
+		<script src="https://kit.fontawesome.com/d927e9314c.js" crossorigin="anonymous"></script>
+		<title>{pageTitle}</title>
+	</head>
+
+	<body>
+		<div>
+			<Header />
+
+			<img src="/logo.png" alt="My Favorite Avatar" class="logo" draggable="false" />
+			
+			
+        	<h1>Hola, I am {myInfo.nick} <i class="fa-classic fa-solid fa-heart" color="red"></i></h1>
+        	<h4><em>Also known as {myInfo.otherNicks.map((nicks) => <b class="nicks">{nicks}</b>)}</em></h4>
+        	<p>I'm a 16-year-old self-taught developer, programming and building variety of applications makes me happy, I don't know why. Other than that, I happen to be a Graphic Designer and Moderator. Favorite animal? bunnies and golden retrievers.</p>
+
+			<p>And of course, how can I forget, I love watching anime, Haikyuu!! and One Piece stands on top as my favorites, you can find more details on <a href="https://anilist.co/user/FoUnDeR/">https://anilist.co/user/FoUnDeR/</a></p>
+			<p class="occupations">{occupations.map((jobs) =>  <em class="occupations">{jobs}</em>)}</p>
+    	</div>
+
+		<div>
+			<Socials />
+		</div>
+        <slot />
+		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
+	</body>
+</html>
