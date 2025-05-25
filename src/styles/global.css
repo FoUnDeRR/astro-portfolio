@@ -129,3 +129,15 @@ a {
     display: none;
   }
 }
+
+
+
+/* theme toggle */ 
+html.dark {
+  background-color: #5865F2;
+  color: #fff;
+}
+
+.dark .nav-links a {
+  color: #fff;
+}

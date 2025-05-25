@@ -11,6 +11,8 @@ const myInfo = {
 	otherNicks: ["Grzzly", "JustMightyYeti"],
 };
 const occupations = ["Developer", "Programmer", "Designer", "Moderator"]
+
+const finishedLearningAstro = true;
 ---
 
 <html lang="en">
@@ -37,6 +39,7 @@ const occupations = ["Developer", "Programmer", "Designer", "Moderator"]
 
 			<p>And of course, how can I forget, I love watching anime, Haikyuu!! and One Piece stands on top as my favorites, you can find more details on <a href="https://anilist.co/user/FoUnDeR/">https://anilist.co/user/FoUnDeR/</a></p>
 			<p class="occupations">{occupations.map((jobs) =>  <em class="occupations">{jobs}</em>)}</p>
+			<p>Finished learning Astro?: {finishedLearningAstro && "Yep, finished Astro basics!"}</p>
     	</div>
 
 		<div>
