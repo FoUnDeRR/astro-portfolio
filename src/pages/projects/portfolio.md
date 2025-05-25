@@ -7,5 +7,5 @@ author: 'FoUnDeR'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ["Astro", "Web", "Self-taught"]
+tags: ["Astro", "Web", "Self taught"]
 ---
